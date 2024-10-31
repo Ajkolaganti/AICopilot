@@ -29,9 +29,22 @@
 		212FE8D92CD345510065A0CE /* interviewCopilotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = interviewCopilotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		21A84B102CD34A040052818C /* Exceptions for "interviewCopilot" folder in "interviewCopilot" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 212FE8BC2CD3454F0065A0CE /* interviewCopilot */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		212FE8BF2CD3454F0065A0CE /* interviewCopilot */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				21A84B102CD34A040052818C /* Exceptions for "interviewCopilot" folder in "interviewCopilot" target */,
+			);
 			path = interviewCopilot;
 			sourceTree = "<group>";
 		};
@@ -398,7 +411,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"interviewCopilot/Preview Content\"";
 				DEVELOPMENT_TEAM = G4KZ4527SM;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/interviewCopilot/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -427,7 +442,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"interviewCopilot/Preview Content\"";
 				DEVELOPMENT_TEAM = G4KZ4527SM;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/interviewCopilot/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

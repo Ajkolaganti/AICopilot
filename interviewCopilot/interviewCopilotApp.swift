@@ -6,27 +6,23 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct interviewCopilotApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    @StateObject private var userManager = UserManager.shared
+    @StateObject private var subscriptionManager = SubscriptionManager.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if userManager.isAuthenticated {
+                if userManager.currentUser?.subscriptionStatus == .none {
+                    SubscriptionView()
+                } else {
+                    ContentView()
+                }
+            } else {
+                SplashScreen()
+            }
         }
-        .modelContainer(sharedModelContainer)
     }
 }
